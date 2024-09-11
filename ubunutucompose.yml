@@ -1,0 +1,15 @@
+version: '2\3'
+services: 
+  new1:
+    image: ct
+    container_name: ubuntuc
+    ports: 
+      - "2345:80"
+    volumes: 
+      - cvb:/container/data 
+    networks:
+      - network5
+networks: 
+  network5:
+volumes: 
+  cvb:
