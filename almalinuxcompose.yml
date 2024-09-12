@@ -1,0 +1,15 @@
+version: '3'
+services:
+  rot:
+    image: fd
+    container_name: almahttpdc
+    ports:
+      - "9876:80"
+    volumes:
+      - bcd:/data
+    networks:
+      - network4
+networks:
+  network4:
+volumes:
+  bcd:                       
