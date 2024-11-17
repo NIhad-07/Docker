@@ -1,0 +1,21 @@
+version: '3'
+services:
+  serv3:
+    image: redis:latest
+    container_name: redisdb
+    ports:
+      - "2007:6379"
+    networks:
+      - network07
+    volumes:
+      - ned:/data/redis
+    environment:
+      - REDIS_PASSWORD=mysecretpassword
+
+
+networks:
+  network07:
+    driver: bridge
+volumes:
+  ned:
+
