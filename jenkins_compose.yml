@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  sev9:
+    image: jenkins/jenkins:latest
+    container_name: proxy-manager
+    ports:
+      - "3002:8080"
+      - "3004:8443"
+    volumes:
+      - jk:/var/jenkins_home
+    networks:
+      - net08
+
+networks:
+  net08:
+    driver: bridge
+
+volumes:
+  jk:
