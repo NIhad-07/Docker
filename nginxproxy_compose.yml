@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  services9:
+    image: jc21/nginx-proxy-manager
+    container_name: proxy-manager
+    ports:
+      - "8081:80"
+      - "8082:81"
+    volumes:
+      - pop:/etc/letsencrypt
+      - iop:/data
+    networks:
+      - net8
+
+networks:
+  net8:
+    driver: bridge
+
+volumes:
+  pop:
+  iop:
