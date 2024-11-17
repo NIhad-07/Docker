@@ -1,0 +1,22 @@
+version: '3'
+services:
+  serv2:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "2006:27017"
+    networks:
+      - network06
+    volumes:
+      - ced:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=mydatabase
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=mysecretpassword
+
+
+networks:
+  network06:
+    driver: bridge
+volumes:
+  ced:
