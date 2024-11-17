@@ -1,0 +1,19 @@
+version: '3'
+services:
+  serv9:
+    image: portainer/portainer
+    container_name: portainerc
+    ports:
+      - "6003:9000"
+    networks:
+      - network08
+    volumes:
+      - num:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - PORTAINER_ADMIN_PASSWORD=asd123.
+
+networks:
+  network08:
+volumes:
+  num:
