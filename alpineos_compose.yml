@@ -1,0 +1,14 @@
+version: '3'
+services:
+  leb:
+    image: alpine:latest
+    container_name: alpineos
+    networks:
+      - network02
+    command: sleep infinity
+    restart: always
+
+networks:
+  network02:
+    driver: bridge
+
