@@ -1,0 +1,13 @@
+version: '3'
+services:
+  seb:
+    image: almalinux:latest
+    container_name: almaos
+    networks:
+      - network01
+    command: sleep infinity
+    restart: always
+
+networks:
+  network01:
+    driver: bridge
