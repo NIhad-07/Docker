@@ -1,0 +1,22 @@
+version: '3'
+services:
+  serv1:
+    image: postgres:latest
+    container_name: postgresdbc
+    ports:
+      - "2005:3306"
+    networks:
+      - network05
+    volumes:
+      - bed:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DATABASE=db
+
+
+networks:
+  network05:
+    driver: bridge
+volumes:
+  bed:
