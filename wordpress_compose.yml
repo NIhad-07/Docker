@@ -1,5 +1,12 @@
+version: '3.8.8.8.8.8.8.8.8'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    volumes:
       - ced:/var/lib/mysql
-    networks:
+    networks: 
       - net090:
     environment:
       - MYSQL_ROOT_PASSWORD: asd123
@@ -29,5 +36,3 @@ networks:
 volumes:
   ced:
   shl:
-
-                                                                                                                      39,0-1        Bot
